@@ -7,9 +7,7 @@ import { FoodService } from "../services/food.service";
 })
 export class RecipeListComponent implements OnInit {
   recipes: any[];
-  constructor(private foodService: FoodService) {
-    console.log(this.recipes);
-  }
+  constructor(private foodService: FoodService) {}
   getRecipe() {
     this.foodService.getRecipe().subscribe(data => {
       this.recipes = data.hits;

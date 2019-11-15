@@ -11,7 +11,7 @@ export class FoodService {
   constructor(private http: HttpClient) {}
   getRecipe(): Observable<any> {
     return this.http.get(
-      `http://api.edamam.com/search?q=food&app_id=2f9c222e&app_key=a30e2cfbb73fc3dea624656c24d5e8ee`,
+      `http://api.edamam.com/search?q=chicken&app_id=2f9c222e&app_key=a30e2cfbb73fc3dea624656c24d5e8ee`,
       {}
     );
   }
