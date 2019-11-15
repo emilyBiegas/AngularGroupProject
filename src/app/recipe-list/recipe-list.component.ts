@@ -7,12 +7,17 @@ import { FoodService } from "../services/food.service";
 })
 export class RecipeListComponent implements OnInit {
   recipes: any[];
-  constructor(private foodService: FoodService) {}
-  getSearch(topic: string) {
-    this.foodService.getRecipe(topic).subscribe(data => {
+  constructor(private foodService: FoodService) {
+    console.log(this.recipes);
+  }
+  getRecipe() {
+    this.foodService.getRecipe().subscribe(data => {
       this.recipes = data.hits;
       console.log(this.recipes);
     });
   }
-  ngOnInit() {}
+
+  ngOnInit() {
+    this.getRecipe();
+  }
 }

@@ -9,13 +9,10 @@ const API_KEY = "a30e2cfbb73fc3dea624656c24d5e8ee";
 })
 export class FoodService {
   constructor(private http: HttpClient) {}
-  getRecipe(recipe: string): Observable<any> {
-    return this.http.get(`https://api.edamam.com/search?app_id=2f9c222e`, {
-      params: {
-        q: recipe,
-        apiKey: API_KEY,
-        language: "en"
-      }
-    });
+  getRecipe(): Observable<any> {
+    return this.http.get(
+      `http://api.edamam.com/search?q=food&app_id=2f9c222e&app_key=a30e2cfbb73fc3dea624656c24d5e8ee`,
+      {}
+    );
   }
 }
