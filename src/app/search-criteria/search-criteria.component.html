@@ -1,12 +1,14 @@
 <form #searchForm="ngForm" (ngSubmit)="doSearch(searchForm.value.search)">
   <input id="search" name="search" type="text" placeholder="Search" ngModel />
-  <button type="button" routerLink="/recipe-list">Find Recipes</button>
+  <button (click)="(navigate)" type="submit">
+    Find Recipes
+  </button>
 </form>
 <section *ngFor="let recipe of recipes">
   <h2>
     <a [href]="recipe.recipe.url">{{ recipe.recipe.label }}</a>
   </h2>
-  <p>{{ recipe.description }}</p>
+  <p>{{ recipe.recipe.ingredientLines }}</p>
 </section>
 
 <a routerLink="/favorites">My Favorites</a>
