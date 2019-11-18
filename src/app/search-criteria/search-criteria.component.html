@@ -11,7 +11,7 @@
   <img [src]="recipe.recipe.image" />
   <p>{{ recipe.recipe.ingredientLines }}</p>
   <a [href]="recipe.recipe.url">{{ recipe.recipe.source }}</a>
-  <i (click)="(addFavorite)" class="far fa-heart"></i>
+  <i (click)="addFavorite()" class="far fa-heart"></i>
 </section>
 
 <a routerLink="/favorites">My Favorites</a>
