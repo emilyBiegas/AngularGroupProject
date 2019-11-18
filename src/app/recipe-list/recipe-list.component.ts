@@ -6,16 +6,15 @@ import { FoodService } from "../services/food.service";
   styleUrls: ["./recipe-list.component.css"]
 })
 export class RecipeListComponent implements OnInit {
-  recipes: any[];
-  constructor(private foodService: FoodService) {}
-  getRecipe() {
-    this.foodService.getRecipe().subscribe(data => {
-      this.recipes = data.hits;
-      console.log(this.recipes);
+  recipeSearch: any[];
+
+  constructor(private foodSearchservice: FoodService) {}
+  getRecipe(userInput: string) {
+    this.foodSearchservice.getRecipe(userInput).subscribe(data => {
+      this.recipeSearch = data.hits;
+      console.log(this.recipeSearch);
     });
   }
 
-  ngOnInit() {
-    this.getRecipe();
-  }
+  ngOnInit() {}
 }
