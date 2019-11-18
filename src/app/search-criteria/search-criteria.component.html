@@ -1,5 +1,11 @@
-<form #searchForm="ngForm" (ngSubmit)="getRecipe(searchForm.value.search">
-  <input id="search" type="text" placeholder="Search" ngModel />
+<form (ngSubmit)="doSearch(criteria)">
+  <input
+    id="search"
+    name="search"
+    type="text"
+    placeholder="Search"
+    [(ngModel)]="criteria"
+  />
   <button routerLink="/recipe-list">Find Recipes</button>
 </form>
 
