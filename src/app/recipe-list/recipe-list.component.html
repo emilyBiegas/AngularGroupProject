@@ -2,10 +2,9 @@
   <section *ngFor="let recipe of recipes; index as i">
     <h1>{{ recipe.recipe.label }}</h1>
     <img [src]="recipe.recipe.image" />
-    <!-- add an icon to each one that onclick runs a function to add to the favorites array -->
     <a [href]="recipe.recipe.url"
       ><p>{{ recipe.recipe.source }}</p></a
     >
-    <i class="far fa-heart"></i>
+    <i (click)="addFavorite()" class="far fa-heart"></i>
   </section>
 </div>

@@ -1,17 +1,8 @@
 <form #searchForm="ngForm" (ngSubmit)="doSearch(searchForm.value.search)">
   <input id="search" name="search" type="text" placeholder="Search" ngModel />
-  <button (click)="(navigate)" type="submit">
+  <button type="submit">
     Find Recipes
   </button>
 </form>
-<section *ngFor="let recipe of recipes">
-  <h2>
-    <a [href]="recipe.recipe.url">{{ recipe.recipe.label }}</a>
-  </h2>
-  <img [src]="recipe.recipe.image" />
-  <p>{{ recipe.recipe.ingredientLines }}</p>
-  <a [href]="recipe.recipe.url">{{ recipe.recipe.source }}</a>
-  <i (click)="addFavorite()" class="far fa-heart"></i>
-</section>
 
 <a routerLink="/favorites">My Favorites</a>

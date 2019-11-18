@@ -8,8 +8,14 @@ import { FoodService } from "../services/food.service";
 })
 export class RecipeListComponent implements OnInit {
   criteria: string = "";
+  favorites: any[] = [];
+
   constructor(private foodService: FoodService) {}
 
+  addFavorite(i) {
+    this.favorites.push(i);
+    console.log(this.favorites);
+  }
   ngOnInit() {
     this.foodService.getRecipe(this.criteria);
   }

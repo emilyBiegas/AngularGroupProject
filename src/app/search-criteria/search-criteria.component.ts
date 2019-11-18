@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { FoodService } from "../services/food.service";
-import { FormsModule } from "@angular/forms";
 import { Router } from "@angular/router";
 @Component({
   selector: "app-search-criteria",
@@ -15,11 +14,10 @@ export class SearchCriteriaComponent implements OnInit {
   doSearch(criteria: string) {
     this.foodService.getRecipe(criteria).subscribe(data => {
       this.recipes = data.hits;
+      this.router.navigate(["recipe-list"]);
       console.log(this.recipes);
     });
   }
-  navigate() {
-    this.router.navigate(["recipe-list"]);
-  }
+
   ngOnInit() {}
 }
