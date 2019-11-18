@@ -13,6 +13,10 @@
     <a [href]="recipe.recipe.url"
       ><p>{{ recipe.recipe.source }}</p></a
     >
-    <i (click)="addFavorite(recipe)" class="far fa-heart"></i>
+    <i
+      (click)="addFavorite(recipe)"
+      class="far fa-heart"
+      [ngClass]="{ heart: recipe.favorite }"
+    ></i>
   </section>
 </div>

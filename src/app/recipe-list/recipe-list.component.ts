@@ -9,7 +9,7 @@ import { SearchCriteriaComponent } from "../search-criteria/search-criteria.comp
 export class RecipeListComponent implements OnInit {
   recipes = SearchCriteriaComponent.recipes;
   criteria: string = "";
-  // @Input()
+  favorite: boolean = false;
   favorites: any[] = [];
   static favorites: any[];
 
@@ -18,6 +18,7 @@ export class RecipeListComponent implements OnInit {
   constructor(private foodService: FoodService) {}
 
   addFavorite(recipe) {
+    recipe.favorite = true;
     this.favorites.push(recipe);
     console.log(this.favorites);
     this.foodService.setFavorite(this.favorites);
