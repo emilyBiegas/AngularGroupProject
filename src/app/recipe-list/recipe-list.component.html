@@ -1,3 +1,11 @@
+<a routerLink="/favorites">My Favorites</a>
+<input
+  type="text"
+  id="filter"
+  placeholder="Filter by ingredient"
+  [(ngModel)]="filterText"
+/>
+
 <div class="container">
   <section *ngFor="let recipe of recipes; index as i">
     <h1>{{ recipe.recipe.label }}</h1>
@@ -5,6 +13,6 @@
     <a [href]="recipe.recipe.url"
       ><p>{{ recipe.recipe.source }}</p></a
     >
-    <i (click)="addFavorite(recipe.recipe)" class="far fa-heart"></i>
+    <i (click)="addFavorite(recipe)" class="far fa-heart"></i>
   </section>
 </div>

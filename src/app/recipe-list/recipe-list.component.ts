@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, EventEmitter } from "@angular/core";
 import { FoodService } from "../services/food.service";
 import { SearchCriteriaComponent } from "../search-criteria/search-criteria.component";
 @Component({
@@ -9,17 +9,32 @@ import { SearchCriteriaComponent } from "../search-criteria/search-criteria.comp
 export class RecipeListComponent implements OnInit {
   recipes = SearchCriteriaComponent.recipes;
   criteria: string = "";
+  // @Input()
   favorites: any[] = [];
+  static favorites: any[];
+
+  // filterText: string = "";
 
   constructor(private foodService: FoodService) {}
 
-  addFavorite(i) {
-    this.favorites.push(i);
+  addFavorite(recipe) {
+    this.favorites.push(recipe);
     console.log(this.favorites);
+    this.foodService.setFavorite(this.favorites);
   }
+
+  // filter() {
+  //   if (!this.filterText) {
+  //     return this.recipes;
+  //   }
+
+  //   let match = this.filterText.toLowerCase();
+  //   return this.recipes.filter(item => item.includes(match));
+  // }
+
   ngOnInit() {
-    this.recipes = SearchCriteriaComponent.recipes;
-    console.log(this.recipes);
+    // console.log(this.recipes);
+    console.log(this.favorites);
     this.foodService.getRecipe(this.criteria);
   }
 }
