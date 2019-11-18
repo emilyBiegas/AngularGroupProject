@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Output } from "@angular/core";
 import { FoodService } from "../services/food.service";
 import { Router } from "@angular/router";
 @Component({
@@ -7,6 +7,7 @@ import { Router } from "@angular/router";
   styleUrls: ["./search-criteria.component.css"]
 })
 export class SearchCriteriaComponent implements OnInit {
+  @Output()
   recipes: any[];
 
   constructor(private foodService: FoodService, private router: Router) {}

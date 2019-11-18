@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import { FoodService } from "../services/food.service";
 // import { SearchCriteriaComponent } from "../search-criteria/search-criteria.component";
 @Component({
@@ -7,6 +7,9 @@ import { FoodService } from "../services/food.service";
   styleUrls: ["./recipe-list.component.css"]
 })
 export class RecipeListComponent implements OnInit {
+  @Input()
+  recipes
+
   criteria: string = "";
   favorites: any[] = [];
 
