@@ -5,6 +5,6 @@
     <a [href]="recipe.recipe.url"
       ><p>{{ recipe.recipe.source }}</p></a
     >
-    <i (click)="addFavorite()" class="far fa-heart"></i>
+    <i (click)="addFavorite(recipe.recipe)" class="far fa-heart"></i>
   </section>
 </div>

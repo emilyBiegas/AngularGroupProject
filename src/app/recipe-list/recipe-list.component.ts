@@ -18,8 +18,6 @@ export class RecipeListComponent implements OnInit {
     console.log(this.favorites);
   }
   ngOnInit() {
-    let recipes = SearchCriteriaComponent.recipes;
-
     this.recipes = SearchCriteriaComponent.recipes;
     console.log(this.recipes);
     this.foodService.getRecipe(this.criteria);
