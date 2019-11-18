@@ -7,7 +7,6 @@ import { FavoritesComponent } from "./favorites/favorites.component";
 import { SearchCriteriaComponent } from "./search-criteria/search-criteria.component";
 import { RecipeListComponent } from "./recipe-list/recipe-list.component";
 import { FormsModule } from "@angular/forms";
-
 @NgModule({
   declarations: [
     AppComponent,
