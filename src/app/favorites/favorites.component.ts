@@ -12,6 +12,10 @@ export class FavoritesComponent implements OnInit {
   static favorites: any;
   constructor(private foodService: FoodService) {}
 
+  deleteFavorite(favorite) {
+    this.favorites.splice(favorite, 1);
+  }
+
   ngOnInit() {
     this.favorites = this.foodService.getFavorite();
     console.log("favoritesComponent", this.favorites);
