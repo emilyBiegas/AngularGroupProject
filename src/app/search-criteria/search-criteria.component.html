@@ -1,12 +1,6 @@
-<form (ngSubmit)="doSearch(criteria)">
-  <input
-    id="search"
-    name="search"
-    type="text"
-    placeholder="Search"
-    [(ngModel)]="criteria"
-  />
-  <button routerLink="/recipe-list">Find Recipes</button>
+<form #searchForm="ngForm" (ngSubmit)="doSearch(searchForm.value.search)">
+  <input id="search" name="search" type="text" placeholder="Search" ngModel />
+  <button type="button" routerLink="/recipe-list">Find Recipes</button>
 </form>
 <section *ngFor="let recipe of recipes">
   <h2>
