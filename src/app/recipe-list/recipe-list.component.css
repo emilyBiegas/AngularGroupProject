@@ -1,3 +1,41 @@
 .heart {
   color: crimson;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+}
+
+input {
+  width: 60%;
+}
+.container {
+  /* position: absolute; */
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%); */
+}
+
+section {
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  white-space: nowrap;
+}
