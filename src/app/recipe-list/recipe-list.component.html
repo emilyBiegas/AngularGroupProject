@@ -1,28 +1,32 @@
 <main>
   <span>
-    <input
-      type="text"
-      id="filter"
-      placeholder="Filter by ingredient"
-      [(ngModel)]="filterText"
-    />
+    <input type="text" id="filter" placeholder="Filter by ingredient" [(ngModel)]="filterText" />
     <a routerLink="/favorites">My Favorites</a>
   </span>
 
   <div class="container">
     <section *ngFor="let recipe of recipes; index as i">
       <h1>{{ recipe.recipe.label }}</h1>
-      <img [src]="recipe.recipe.image" />
-      <a [href]="recipe.recipe.url"
-        ><p>{{ recipe.recipe.source }}</p></a
-      >
-      <i
-        (click)="addFavorite(recipe)"
-        class="far fa-heart"
-        [ngClass]="{ heart: recipe.favorite }"
-      ></i>
+      <img [src]="recipe.recipe.image" (click)="setIndex(i)" />
+      <a [href]="recipe.recipe.url">
+        <p>{{ recipe.recipe.source }}</p>
+      </a>
+      <i (click)="addFavorite(recipe)" class="far fa-heart" [ngClass]="{ heart: recipe.favorite }"></i>
+
+      <div class="more-info" *ngIf="index === i">
+
+        <i (click)="hideRecipe(i)"class="fas fa-times"></i>
+
+        <p>{{ recipe.recipe.healthLabels }} </p>
+        <p>{{ recipe.recipe.totalTime }}</p>
+        <p>{{ recipe.recipe.yield }}</p>
+
+        <p>{{ recipe.recipe.calories }}</p>
+        <p>{{ recipe.recipe.ingredientLines }}</p>
+      </div>
+
     </section>
+
   </div>
 
-  <div *ngIf=""></div>
 </main>

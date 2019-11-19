@@ -12,6 +12,8 @@ export class RecipeListComponent implements OnInit {
   favorite: boolean = false;
   favorites: any[] = [];
   static favorites: any[];
+  hidden: boolean = true;
+  index: number;
 
   // filterText: string = "";
 
@@ -23,6 +25,14 @@ export class RecipeListComponent implements OnInit {
     console.log(this.favorites);
     this.foodService.setFavorite(this.favorites);
   }
+
+  setIndex(indexNumber: number) {
+    this.index = indexNumber;
+  }
+
+hideRecipe(indexNumber: number) {
+this.index = null;
+}
 
   // filter() {
   //   if (!this.filterText) {

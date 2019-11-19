@@ -21,6 +21,7 @@ span {
 input {
   width: 60%;
 }
+
 .container {
   /* position: absolute; */
   width: 1000px;
@@ -38,4 +39,10 @@ section {
   flex-wrap: wrap;
   align-items: center;
   white-space: nowrap;
+}
+
+.more-info {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
 }
