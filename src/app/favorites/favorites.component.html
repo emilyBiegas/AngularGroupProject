@@ -1,8 +1,16 @@
-<section *ngFor="let favorite of favorites; index as i">
-  <h1>{{ favorite.recipe.label }}</h1>
-  <img [src]="favorite.recipe.image" />
-  <a [href]="favorite.recipe.url"
-    ><p>{{ favorite.recipe.source }}</p></a
-  >
-  <i (click)="deleteFavorite(i)" class="fas fa-times"></i>
-</section>
+  <a routerLink="/search-criteria" class="fas fa-home"></a>
+  <main>
+    <div class="container">
+      <section *ngFor="let favorite of favorites; index as i">
+        <h1>{{ favorite.recipe.label }}</h1>
+        <img [src]="favorite.recipe.image" />
+
+        <span class="source-icon">
+          <a [href]="favorite.recipe.url">
+            <p>{{ favorite.recipe.source }}</p>
+          </a>
+          <i (click)="deleteFavorite(i)" class="fas fa-times"></i>
+        </span>
+      </section>
+    </div>
+  </main>
