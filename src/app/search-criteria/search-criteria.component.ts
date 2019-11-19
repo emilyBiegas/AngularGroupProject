@@ -16,10 +16,12 @@ export class SearchCriteriaComponent implements OnInit {
   constructor(private foodService: FoodService, private router: Router) {}
 
   doSearch(form: any) {
-    this.foodService.getRecipe(form.search, form.calories).subscribe(data => {
-      this.recipes = data.hits;
-      // this.router.navigate(["recipe-list"]);
-    });
+    this.foodService
+      .getRecipe(form.search, form.calories, form.diet)
+      .subscribe(data => {
+        this.recipes = data.hits;
+        // this.router.navigate(["recipe-list"]);
+      });
   }
 
   ngOnInit() {}
