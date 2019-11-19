@@ -1,11 +1,6 @@
 <main>
   <span>
-    <input
-      type="text"
-      id="filter"
-      placeholder="Filter by ingredient"
-      [(ngModel)]="filterText"
-    />
+    <input type="text" id="filter" placeholder="Filter by ingredient" [(ngModel)]="filterText" />
     <a routerLink="/favorites">My Favorites</a>
   </span>
 
@@ -16,11 +11,7 @@
       <a [href]="recipe.recipe.url">
         <p>{{ recipe.recipe.source }}</p>
       </a>
-      <i
-        (click)="addFavorite(recipe)"
-        class="far fa-heart"
-        [ngClass]="{ heart: recipe.favorite }"
-      ></i>
+      <i (click)="addFavorite(recipe)" class="far fa-heart" [ngClass]="{ heart: recipe.favorite }"></i>
       <div class="more-info" *ngIf="index === i">
         <i (click)="hideRecipe(i)" class="fas fa-times"></i>
 
@@ -29,8 +20,9 @@
         <p>{{ recipe.recipe.yield }}</p>
 
         <p>{{ recipe.recipe.calories }}</p>
-
-        <p>{{ recipe.recipe.ingredientLines }}</p>
+        <ul>
+          <li *ngFor="let recipe of recipes; index as i">{{ recipe.recipe.ingredientLines[i] }}</li>
+        </ul>
       </div>
     </section>
   </div>
