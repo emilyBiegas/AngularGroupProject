@@ -47,6 +47,11 @@ section {
   height: 800px;
   background-color: lightsalmon;
   position: absolute;
-  top: 50%;
+  top: 40%;
   z-index: 1;
+}
+
+.labels li {
+  display: inline;
+  list-style-type: none;
 }

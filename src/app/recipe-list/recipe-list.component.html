@@ -24,13 +24,19 @@
       <div class="more-info" *ngIf="index === i">
         <i (click)="hideRecipe(i)" class="fas fa-times"></i>
 
-        <p>{{ recipe.recipe.healthLabels }}</p>
-        <p>{{ recipe.recipe.totalTime }}</p>
-        <p>{{ recipe.recipe.yield }}</p>
+        <ul class="labels" *ngFor="let label of recipe.recipe.healthLabels">
+          <li>{{ label }}</li>
+        </ul>
+        <p>Total Time: {{ recipe.recipe.totalTime }}</p>
+        <p>Servings: {{ recipe.recipe.yield }}</p>
 
         <p>{{ recipe.recipe.calories }}</p>
-
-        <p>{{ recipe.recipe.ingredientLines }}</p>
+        <p>Ingredients:</p>
+        <ul *ngFor="let ingredient of recipe.recipe.ingredientLines">
+          <li>
+            {{ ingredient }}
+          </li>
+        </ul>
       </div>
     </section>
   </div>

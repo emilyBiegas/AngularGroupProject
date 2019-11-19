@@ -9,7 +9,9 @@ import { typeWithParameters } from "@angular/compiler/src/render3/util";
   styleUrls: ["./search-criteria.component.css"]
 })
 export class SearchCriteriaComponent implements OnInit {
-  static recipes: any[];
+  static recipes: [];
+  static ingredients: string[];
+  static ingredientLines: string[];
 
   constructor(private foodService: FoodService, private router: Router) {}
 

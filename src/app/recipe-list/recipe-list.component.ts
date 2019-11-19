@@ -8,6 +8,7 @@ import { SearchCriteriaComponent } from "../search-criteria/search-criteria.comp
 })
 export class RecipeListComponent implements OnInit {
   recipes = SearchCriteriaComponent.recipes;
+  ingredients: string[] = this.recipes.ingredientLines;
   criteria: string = "";
   favorite: boolean = false;
   favorites: any[] = [];
