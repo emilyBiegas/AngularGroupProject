@@ -19,7 +19,9 @@ export class FoodService {
       "http://api.edamam.com/search?app_id=2f9c222e&app_key=a30e2cfbb73fc3dea624656c24d5e8ee",
       {
         params: {
-          q: criteria
+          q: criteria,
+          // calories: `100-{{calories}}`
+          calories: `100-1000`
         }
       }
     );
