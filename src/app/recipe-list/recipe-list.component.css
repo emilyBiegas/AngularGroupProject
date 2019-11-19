@@ -39,10 +39,14 @@ section {
   flex-wrap: wrap;
   align-items: center;
   white-space: nowrap;
+  position: relative;
 }
 
 .more-info {
-  width: 100px;
-  height: 100px;
-  background-color: orange;
+  width: 600px;
+  height: 800px;
+  background-color: lightsalmon;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
 }

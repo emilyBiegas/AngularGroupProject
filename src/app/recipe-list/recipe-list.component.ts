@@ -30,9 +30,9 @@ export class RecipeListComponent implements OnInit {
     this.index = indexNumber;
   }
 
-hideRecipe(indexNumber: number) {
-this.index = null;
-}
+  hideRecipe(indexNumber: number) {
+    this.index = null;
+  }
 
   // filter() {
   //   if (!this.filterText) {
