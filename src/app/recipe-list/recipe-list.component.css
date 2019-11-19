@@ -30,43 +30,9 @@ a:hover {
   color: coral;
 }
 
-@media screen and (max-width: 815px) {
-  section {
-    width: 48%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin: 15px;
-    padding: 10px;
-  }
-
-  .container {
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  h1 {
-    text-align: center;
-    font-size: 20px;
-  }
-
-  span {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-top: 40px;
-  }
-
-  .heart {
-    color: crimson;
-  }
+img {
+  border-radius: 6px;
 }
-
 @media screen and (min-width: 768px) {
   .heart {
     color: crimson;
@@ -99,7 +65,7 @@ a:hover {
   }
 
   .container {
-    width: 1000px;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -144,5 +110,43 @@ a:hover {
 
   .noBackground {
     background-image: none;
+  }
+}
+
+@media screen and (min: 815px) {
+  section {
+    width: 48%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 15px;
+    padding: 10px;
+  }
+
+  .container {
+    margin-top: 10px;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .heart {
+    color: crimson;
   }
 }
