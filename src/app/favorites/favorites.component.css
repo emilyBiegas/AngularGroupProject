@@ -31,47 +31,6 @@ a:hover {
   color: coral;
 }
 
-@media screen and (min-width: 768px) {
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-  }
-
-  .container {
-    width: 1000px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  section {
-    width: 30%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    position: relative;
-  }
-
-  .source-icon {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  span {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-top: 40px;
-  }
-
-  .fa-home {
-    color: black;
-  }
-}
 
 @media screen and (max-width: 815px) {
   section {
