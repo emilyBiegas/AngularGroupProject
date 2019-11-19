@@ -30,9 +30,15 @@
         <p>Total Time: {{ recipe.recipe.totalTime }}</p>
         <p>Servings: {{ recipe.recipe.yield }}</p>
 
-        <p>{{ recipe.recipe.calories }}</p>
+        <p>
+          Calories per serving:
+          {{ recipe.recipe.calories / recipe.recipe.yield }}
+        </p>
         <p>Ingredients:</p>
-        <ul *ngFor="let ingredient of recipe.recipe.ingredientLines">
+        <ul
+          class="ingredients"
+          *ngFor="let ingredient of recipe.recipe.ingredientLines"
+        >
           <li>
             {{ ingredient }}
           </li>

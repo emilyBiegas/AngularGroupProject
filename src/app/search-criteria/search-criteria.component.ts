@@ -9,17 +9,16 @@ import { typeWithParameters } from "@angular/compiler/src/render3/util";
   styleUrls: ["./search-criteria.component.css"]
 })
 export class SearchCriteriaComponent implements OnInit {
-  static recipes: [];
-  static ingredients: string[];
-  static ingredientLines: string[];
+  recipes: [];
+  ingredients: string[];
+  ingredientLines: string[];
 
   constructor(private foodService: FoodService, private router: Router) {}
 
-  doSearch(criteria: string) {
-    this.foodService.getRecipe(criteria).subscribe(data => {
-      SearchCriteriaComponent.recipes = data.hits;
-      this.router.navigate(["recipe-list"]);
-      console.log(SearchCriteriaComponent.recipes);
+  doSearch(form: any) {
+    this.foodService.getRecipe(form.search, form.calories).subscribe(data => {
+      this.recipes = data.hits;
+      // this.router.navigate(["recipe-list"]);
     });
   }
 
