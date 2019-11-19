@@ -18,19 +18,20 @@ span {
   margin-top: 40px;
 }
 
+.source-icon {
+  display: flex;
+  justify-content: space-between;
+}
+
 input {
   width: 60%;
 }
 
 .container {
-  /* position: absolute; */
   width: 1000px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* right: 50%;
-  top: 50%;
-  transform: translate(50%, -50%); */
 }
 
 section {
@@ -38,7 +39,6 @@ section {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  white-space: nowrap;
   position: relative;
 }
 

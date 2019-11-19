@@ -20,7 +20,6 @@ export class SearchCriteriaComponent implements OnInit {
       .getRecipe(form.search, form.calories, form.diet)
       .subscribe(data => {
         this.recipes = data.hits;
-        // this.router.navigate(["recipe-list"]);
       });
   }
 
