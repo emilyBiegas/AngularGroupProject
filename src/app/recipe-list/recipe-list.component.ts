@@ -7,11 +7,12 @@ import { SearchCriteriaComponent } from "../search-criteria/search-criteria.comp
   styleUrls: ["./recipe-list.component.css"]
 })
 export class RecipeListComponent implements OnInit {
-  recipes = SearchCriteriaComponent.recipes;
+  @Input() recipes: any[];
+
   criteria: string = "";
   favorite: boolean = false;
   favorites: any[] = [];
-  static favorites: any[];
+  // static favorites: any[];
   hidden: boolean = true;
   index: number;
 

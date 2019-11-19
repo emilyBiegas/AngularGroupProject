@@ -1,8 +1,16 @@
-<form #searchForm="ngForm" (ngSubmit)="doSearch(searchForm.value.search)">
+<form #searchForm="ngForm" (ngSubmit)="doSearch(searchForm.value)">
   <input id="search" name="search" type="text" placeholder="Search" ngModel />
+  <label for="calories">Filter by calories</label>
+  <input
+    id="calories"
+    name="calories"
+    type="text"
+    placeholder="Calories"
+    ngModel
+  />
   <button type="submit">
     Find Recipes
   </button>
 </form>
-
+<app-recipe-list [recipes]="recipes"></app-recipe-list>
 <a routerLink="/favorites">My Favorites</a>
