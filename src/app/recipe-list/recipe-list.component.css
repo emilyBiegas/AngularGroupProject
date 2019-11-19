@@ -1,66 +1,93 @@
-.heart {
-  color: crimson;
-}
+  .heart {
+    color: crimson;
+  }
 
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
 
-span {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-top: 40px;
-}
+  h1 {
+    font-size: 20px;
+  }
 
-.source-icon {
-  display: flex;
-  justify-content: space-between;
-}
+  span {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+  }
 
-input {
-  width: 60%;
-}
-.recipePost {
-  background-color: rgba(161, 239, 245, 0.1);
-  border-radius: 10px;
-  margin-top: 40px;
-  margin-bottom: 10px;
-}
-.container {
-  width: 1000px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 40px;
-}
 
-section {
-  width: 30%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  position: relative;
-}
+  @media screen and (min-width: 768px) {
 
-.more-info {
-  width: 600px;
-  height: 800px;
-  background-color: lightsalmon;
-  position: absolute;
-  top: 40%;
-  z-index: 1;
-}
+    .heart {
+      color: crimson;
+    }
 
-.labels li {
-  display: inline;
-  list-style-type: none;
-}
-.noBackground {
-  background-image: none;
-}
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    span {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-top: 40px;
+    }
+
+    .source-icon {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .recipePost {
+      background-color: rgba(161, 239, 245, 0.1);
+      border-radius: 10px;
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+
+    .container {
+      width: 1000px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    section {
+      width: 30%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      position: relative;
+    }
+
+    .more-info {
+      width: 600px;
+      height: 800px;
+      background-color: lightsalmon;
+      position: absolute;
+      top: 40%;
+      z-index: 1;
+    }
+
+    .labels li {
+      display: inline;
+      list-style-type: none;
+    }
+
+    .noBackground {
+      background-image: none;
+    }
+  }
