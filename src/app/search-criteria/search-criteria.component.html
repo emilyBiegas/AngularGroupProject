@@ -1,6 +1,10 @@
 <main [ngClass]="{ ' bod': backgroundImage }">
   <section>
-    <form #searchForm="ngForm" (ngSubmit)="doSearch(searchForm.value)">
+    <form
+      class="form"
+      #searchForm="ngForm"
+      (ngSubmit)="doSearch(searchForm.value)"
+    >
       <label for="search">Search</label>
       <input
         id="search"
@@ -9,7 +13,7 @@
         placeholder="Search"
         ngModel
       />
-      <label for="calories">Max calories</label>
+      <label for="calories">Max Calories</label>
       <input
         id="calories"
         name="calories"
