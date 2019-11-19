@@ -8,6 +8,13 @@
     placeholder="Calories"
     ngModel
   />
+  <label for="diet-type"></label>
+  <select name="diet" id="diet-type" class="diet-options" ngModel>
+    <option value="balanced">Balanced</option>
+    <option value="high-protein">High Protein</option>
+    <option value="low-carb">Low Carb</option>
+    <option value="low-fat">Low Fat</option>
+  </select>
   <button type="submit">
     Find Recipes
   </button>
