@@ -35,15 +35,6 @@ export class RecipeListComponent implements OnInit {
     this.index = null;
   }
 
-  // filter() {
-  //   if (!this.filterText) {
-  //     return this.recipes;
-  //   }
-
-  //   let match = this.filterText.toLowerCase();
-  //   return this.recipes.filter(item => item.includes(match));
-  // }
-
   ngOnInit() {
     // console.log(this.recipes);
     console.log(this.favorites);

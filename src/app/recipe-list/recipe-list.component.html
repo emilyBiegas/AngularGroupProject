@@ -16,22 +16,24 @@
       <div class="more-info" *ngIf="index === i">
         <i (click)="hideRecipe(i)" class="fas fa-times"></i>
 
-        <ul class="labels" *ngFor="let label of recipe.recipe.healthLabels">
-          <li>{{ label }}</li>
-        </ul>
-        <p>Total Time: {{ recipe.recipe.totalTime }}</p>
-        <p>Servings: {{ recipe.recipe.yield }}</p>
+        <span class="textContainer">
+          <ul class="labels" *ngFor="let label of recipe.recipe.healthLabels">
+            <li>{{ label }}</li>
+          </ul>
+          <p>Total Time: {{ recipe.recipe.totalTime }}</p>
+          <p>Servings: {{ recipe.recipe.yield }}</p>
 
-        <p>
-          Calories per serving:
-          {{ recipe.recipe.calories / recipe.recipe.yield }}
-        </p>
+          <p>
+            Calories per serving:
+            {{ recipe.recipe.calories / recipe.recipe.yield }}
+          </p>
+        </span>
         <p>Ingredients:</p>
         <ul
           class="ingredients"
           *ngFor="let ingredient of recipe.recipe.ingredientLines"
         >
-          <li>
+          <li class="ingredients">
             {{ ingredient }}
           </li>
         </ul>

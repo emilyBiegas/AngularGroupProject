@@ -2,6 +2,7 @@ import { Component, OnInit, Output } from "@angular/core";
 import { FoodService } from "../services/food.service";
 import { Router } from "@angular/router";
 import { typeWithParameters } from "@angular/compiler/src/render3/util";
+import { stringify } from "querystring";
 
 @Component({
   selector: "app-search-criteria",

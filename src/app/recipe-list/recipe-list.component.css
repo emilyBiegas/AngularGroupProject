@@ -22,19 +22,6 @@ span {
   margin-top: 20px;
 }
 
-<<<<<<< HEAD
-@media screen and (min-width: 768px) {
-  .heart {
-    color: crimson;
-  }
-
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-=======
 a {
   color: rgb(255, 38, 0);
 }
@@ -65,7 +52,6 @@ a:hover {
   h1 {
     text-align: center;
     font-size: 20px;
->>>>>>> 87095bea9a4827de9cb2a9d877f7809235b37e73
   }
 
   span {
@@ -76,12 +62,9 @@ a:hover {
     margin-top: 40px;
   }
 
-<<<<<<< HEAD
-=======
   .heart {
     color: crimson;
   }
-
 }
 
 @media screen and (min-width: 768px) {
@@ -105,51 +88,10 @@ a:hover {
     margin-top: 40px;
   }
 
->>>>>>> 87095bea9a4827de9cb2a9d877f7809235b37e73
   .source-icon {
     display: flex;
     justify-content: space-between;
   }
-<<<<<<< HEAD
-
-  .recipePost {
-    background-color: rgba(161, 239, 245, 0.1);
-    border-radius: 10px;
-    margin-top: 40px;
-    margin-bottom: 10px;
-  }
-
-  .container {
-    width: 1000px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 40px;
-  }
-
-  section {
-    width: 30%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    position: relative;
-  }
-
-  .more-info {
-    width: 600px;
-    height: 800px;
-    background-color: lightsalmon;
-    position: absolute;
-    top: 40%;
-    z-index: 1;
-  }
-
-  .labels li {
-    display: inline;
-    list-style-type: none;
-  }
-
-=======
 
   .recipePost {
     margin-top: 40px;
@@ -174,11 +116,25 @@ a:hover {
 
   .more-info {
     width: 600px;
-    height: 800px;
-    background-color: lightsalmon;
+    height: fit-content;
+    background-color: rgba(255, 160, 122, 0.9);
     position: absolute;
-    top: 40%;
     z-index: 1;
+    border-radius: 15px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+  }
+  .textContainer {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .ingredients {
+    position: relative;
+    left: 20px;
   }
 
   .labels li {
@@ -186,7 +142,6 @@ a:hover {
     list-style-type: none;
   }
 
->>>>>>> 87095bea9a4827de9cb2a9d877f7809235b37e73
   .noBackground {
     background-image: none;
   }
