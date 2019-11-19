@@ -12,7 +12,7 @@ export class SearchCriteriaComponent implements OnInit {
   recipes: [];
   ingredients: string[];
   ingredientLines: string[];
-
+  backgroundImage: boolean = true;
   constructor(private foodService: FoodService, private router: Router) {}
 
   doSearch(form: any) {
@@ -21,6 +21,7 @@ export class SearchCriteriaComponent implements OnInit {
       .subscribe(data => {
         this.recipes = data.hits;
       });
+    this.backgroundImage = false;
   }
 
   ngOnInit() {}

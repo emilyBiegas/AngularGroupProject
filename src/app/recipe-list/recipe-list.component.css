@@ -26,12 +26,18 @@ span {
 input {
   width: 60%;
 }
-
+.recipePost {
+  background-color: rgba(161, 239, 245, 0.1);
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
 .container {
   width: 1000px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 40px;
 }
 
 section {
@@ -54,4 +60,7 @@ section {
 .labels li {
   display: inline;
   list-style-type: none;
+}
+.noBackground {
+  background-image: none;
 }
