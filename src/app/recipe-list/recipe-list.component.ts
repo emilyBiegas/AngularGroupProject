@@ -16,6 +16,9 @@ export class RecipeListComponent implements OnInit {
   hidden: boolean = true;
   index: number;
   math = Math;
+  calories: string;
+  diet: string;
+  to: string;
 
   // filterText: string = "";
 
@@ -39,6 +42,11 @@ export class RecipeListComponent implements OnInit {
   ngOnInit() {
     // console.log(this.recipes);
     console.log(this.favorites);
-    this.foodService.getRecipe(this.criteria);
+    this.foodService.getRecipe(
+      this.criteria,
+      this.calories,
+      this.diet,
+      this.to
+    );
   }
 }

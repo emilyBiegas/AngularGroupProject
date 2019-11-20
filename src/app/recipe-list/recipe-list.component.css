@@ -27,7 +27,7 @@ span {
 
 .source-icon {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 a {
@@ -36,6 +36,24 @@ a {
 
 img {
   border-radius: 6px;
+}
+.more-info {
+  width: 400px;
+  height: fit-content;
+  background-color: rgba(255, 160, 122, 0.9);
+  position: absolute;
+  z-index: 1;
+  border-radius: 15px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px;
+}
+.textContainer {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 @media screen and (min-width: 768px) {
   a:hover {
@@ -66,22 +84,13 @@ img {
 
   .more-info {
     width: 600px;
-    height: fit-content;
-    background-color: rgba(255, 160, 122, 0.9);
-    position: absolute;
-    z-index: 1;
-    border-radius: 15px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
   }
-  .textContainer {
+  /* .textContainer {
     position: relative;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-  }
+  } */
   .ingredients {
     position: relative;
     left: 20px;
