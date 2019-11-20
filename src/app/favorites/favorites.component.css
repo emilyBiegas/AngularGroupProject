@@ -36,7 +36,7 @@ img {
 }
 
 
-@media screen and (max-width: 815px) {
+@media screen and (min-width: 670px) {
   section {
     width: 48%;
     display: flex;
@@ -122,8 +122,6 @@ img {
   }
 
   img {
-    width: 200px;
-    height: 200px;
     border-radius: 6px;
   }
 }
