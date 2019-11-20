@@ -12,7 +12,6 @@ export class RecipeListComponent implements OnInit {
   criteria: string = "";
   favorite: boolean = false;
   favorites: any[] = [];
-  // static favorites: any[];
   hidden: boolean = true;
   index: number;
   math = Math;

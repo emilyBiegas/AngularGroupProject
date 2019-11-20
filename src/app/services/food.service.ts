@@ -4,6 +4,7 @@ import { Observable } from "rxjs";
 import { SearchCriteriaComponent } from "../search-criteria/search-criteria.component";
 import { RecipeListComponent } from "../recipe-list/recipe-list.component";
 import { FavoritesComponent } from "../favorites/favorites.component";
+
 const API_KEY = "a30e2cfbb73fc3dea624656c24d5e8ee";
 const APP_ID = "2f9c222e";
 
@@ -41,6 +42,5 @@ export class FoodService {
 
   setFavorite(favorites): void {
     this.favorites = favorites;
-    console.log("hi", this.favorites);
   }
 }
