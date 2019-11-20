@@ -16,6 +16,7 @@
 #fav {
   color: rgb(230, 42, 0);
   text-align: center;
+  font-weight: bold;
 }
 
 input {

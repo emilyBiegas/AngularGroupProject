@@ -25,9 +25,12 @@ export class RecipeListComponent implements OnInit {
   constructor(private foodService: FoodService) {}
 
   addFavorite(recipe) {
-    recipe.favorite = true;
-    this.favorites.push(recipe);
-    console.log(this.favorites);
+    recipe.favorite = !recipe.favorite;
+    if (recipe.favorite === true) {
+      this.favorites.push(recipe);
+    } else {
+      this.favorites.splice(recipe, 1);
+    }
     this.foodService.setFavorite(this.favorites);
   }
 
