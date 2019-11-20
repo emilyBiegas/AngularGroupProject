@@ -11,8 +11,9 @@ h1 {
   font-size: 20px;
 }
 
-.fa-times {
-  margin-left: 40px;
+.source-icon {
+  display: flex;
+  justify-content: space-around;
 }
 
 span {

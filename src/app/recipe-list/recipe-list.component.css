@@ -1,7 +1,9 @@
 .heart {
   color: crimson;
 }
-
+.recipePost {
+  top: 100px;
+}
 section {
   display: flex;
   flex-direction: column;
