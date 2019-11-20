@@ -18,7 +18,7 @@ export class SearchCriteriaComponent implements OnInit {
 
   doSearch(form: any) {
     this.foodService
-      .getRecipe(form.search, form.calories, form.diet)
+      .getRecipe(form.search, form.calories, form.diet, form.to)
       .subscribe(data => {
         this.recipes = data.hits;
       });
