@@ -15,6 +15,7 @@ export class RecipeListComponent implements OnInit {
   // static favorites: any[];
   hidden: boolean = true;
   index: number;
+  math = Math;
 
   // filterText: string = "";
 

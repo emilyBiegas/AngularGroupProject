@@ -25,7 +25,7 @@
 
           <p>
             Calories per serving:
-            {{ recipe.recipe.calories / recipe.recipe.yield }}
+            {{ math.round(recipe.recipe.calories / recipe.recipe.yield) }}
           </p>
         </span>
         <p>Ingredients:</p>
