@@ -6,10 +6,10 @@ import { FoodService } from "../services/food.service";
   selector: "app-favorites",
   templateUrl: "./favorites.component.html",
   styleUrls: ["./favorites.component.css"]
+
 })
 export class FavoritesComponent implements OnInit {
-  favorites = RecipeListComponent.favorites;
-  static favorites: any;
+  favorites: any;
   constructor(private foodService: FoodService) {}
 
   deleteFavorite(i) {
