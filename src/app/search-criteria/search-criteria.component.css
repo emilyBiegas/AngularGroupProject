@@ -61,6 +61,7 @@ section {
   transform: translate(-50%, -50%);
   color: rgb(52, 61, 80);
   letter-spacing: 2px;
+  margin-bottom: 20px;
 }
 
 form {
