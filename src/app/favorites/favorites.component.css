@@ -13,8 +13,8 @@ h1 {
 
 span {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  align-items: space-between;
   width: 100%;
   margin-top: 20px;
 }
@@ -29,6 +29,10 @@ a {
 
 a:hover {
   color: coral;
+}
+
+img {
+  border-radius: 6px;
 }
 
 
@@ -67,6 +71,11 @@ a:hover {
   .fa-home {
     color: black;
   }
+
+  img {
+    border-radius: 6px;
+  }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -96,15 +105,16 @@ a:hover {
 
   .source-icon {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   span {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     margin-top: 40px;
+    margin-bottom: 5px;
   }
 
   .fa-home {
@@ -114,5 +124,6 @@ a:hover {
   img {
     width: 200px;
     height: 200px;
+    border-radius: 6px;
   }
 }
