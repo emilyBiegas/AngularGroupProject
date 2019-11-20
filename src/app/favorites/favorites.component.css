@@ -11,10 +11,14 @@ h1 {
   font-size: 20px;
 }
 
+.fa-times {
+  margin-left: 40px;
+}
+
 span {
   display: flex;
   justify-content: center;
-  align-items: space-between;
+  align-items: space-around;
   width: 100%;
   margin-top: 20px;
 }

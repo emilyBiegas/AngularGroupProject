@@ -5,34 +5,41 @@
       #searchForm="ngForm"
       (ngSubmit)="doSearch(searchForm.value)"
     >
-      <label for="search">Search</label>
-      <input
-        id="search"
-        name="search"
-        type="text"
-        placeholder="Search"
-        ngModel
-      />
-      <label for="calories">Max Calories</label>
-      <input
-        id="calories"
-        name="calories"
-        type="text"
-        placeholder="Calories"
-        ngModel
-      />
-      <label for="diet-type">Diet Type</label>
-      <select name="diet" id="diet-type" class="diet-options" ngModel>
-        <option value="balanced">Balanced</option>
-        <option value="high-protein">High Protein</option>
-        <option value="low-carb">Low Carb</option>
-        <option value="low-fat">Low Fat</option>
-      </select>
+      <label
+        >Search<input
+          id="search"
+          name="search"
+          type="text"
+          placeholder="Search"
+          ngModel
+      /></label>
+
+      <label
+        >Max Calories
+        <input
+          id="calories"
+          name="calories"
+          type="text"
+          placeholder="Calories"
+          ngModel
+      /></label>
+
+      <label
+        >Diet Type
+        <select name="diet" id="diet-type" class="diet-options" ngModel>
+          <option value="balanced">Balanced</option>
+          <option value="high-protein">High Protein</option>
+          <option value="low-carb">Low Carb</option>
+          <option value="low-fat">Low Fat</option>
+        </select></label
+      >
+
       <button type="submit">
         Find Recipes
       </button>
     </form>
+    <a id="fav" routerLink="/favorites">My Favorites</a>
   </section>
-  <a id="fav" routerLink="/favorites">My Favorites</a>
-  <app-recipe-list [recipes]="recipes"></app-recipe-list>
 </main>
+
+<app-recipe-list [recipes]="recipes"></app-recipe-list>
