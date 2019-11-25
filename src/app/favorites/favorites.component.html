@@ -1,16 +1,44 @@
-  <a routerLink="/search-criteria" class="fas fa-home"></a>
-  <main>
-    <div class="container">
-      <section *ngFor="let favorite of favorites; index as i">
-        <h1>{{ favorite.recipe.label }}</h1>
-        <img [src]="favorite.recipe.image" />
+<a routerLink="/search-criteria" class="fas fa-home"></a>
+<main>
+  <div class="container">
+    <section class="recipePost" *ngFor="let favorite of favorites; index as i">
+      <h1 class="label">{{ favorite.recipe.label }}</h1>
+      <img [src]="favorite.recipe.image" (click)="setIndex(i)" />
 
-        <span class="source-icon">
-          <a [href]="favorite.recipe.url">
-            <p>{{ favorite.recipe.source }}</p>
-          </a>
-          <i (click)="deleteFavorite(i)" class="fas fa-times"></i>
+      <span class="source-icon">
+        <a [href]="favorite.recipe.url">
+          <p>{{ favorite.recipe.source }}</p>
+        </a>
+        <i (click)="deleteFavorite(i)" class="fas fa-times"></i>
+      </span>
+      <div class="more-info" *ngIf="index === i">
+        <i (click)="hideRecipe(i)" class="fas fa-times"></i>
+
+        <span class="textContainer">
+          <ul class="labels" *ngFor="let label of favorite.recipe.healthLabels">
+            <li>{{ label }}</li>
+          </ul>
         </span>
-      </section>
-    </div>
-  </main>
+        <p *ngIf="favorite.recipe.totalTime > 0">
+          Total Time: {{ favorite.recipe.totalTime }} minutes
+        </p>
+        <p>Servings: {{ favorite.recipe.yield }}</p>
+
+        <p>
+          Calories per serving:
+          {{ math.round(favorite.recipe.calories / favorite.recipe.yield) }}
+        </p>
+
+        <p>Ingredients:</p>
+        <ul
+          class="ingredients"
+          *ngFor="let ingredient of favorite.recipe.ingredientLines"
+        >
+          <li class="ingredients">
+            {{ ingredient }}
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</main>

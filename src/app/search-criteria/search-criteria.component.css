@@ -1,9 +1,9 @@
 .bod {
   height: 100vh;
   background-image: linear-gradient(
-    to bottom,
-    rgba(192, 192, 192, 1),
-    rgb(110, 128, 128)
+    to right,
+    rgb(245, 204, 143),
+    rgb(247, 194, 102)
   );
   background-repeat: no-repeat;
   display: flex;
@@ -66,7 +66,7 @@ label {
   .bod {
     height: 100vh;
     width: 100%;
-    background-image: url("../../../img/backgroundContrast.jpg");
+    background-image: url("../../../img/ingredients.jpg");
     background-size: cover;
     background-repeat: no-repeat;
   }

@@ -16,12 +16,7 @@ export class FoodService {
   private favorites: any[] = [];
   constructor(private http: HttpClient) {}
 
-  getRecipe(
-    criteria: string,
-    calories: string,
-    diet: string,
-    to: string
-  ): Observable<any> {
+  getRecipe(criteria: string, calories: string, diet: string): Observable<any> {
     return this.http.get("http://api.edamam.com/search?", {
       params: {
         app_key: API_KEY,

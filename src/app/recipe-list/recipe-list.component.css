@@ -5,6 +5,21 @@
 .recipePost {
   top: 10px;
 }
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.container {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 section {
   display: flex;
   flex-direction: column;
@@ -12,7 +27,9 @@ section {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-top: 10px;
+  margin-top: 40px;
+  border-bottom: 1px solid coral;
+  padding-bottom: 10px;
 }
 
 h1 {
@@ -69,30 +86,15 @@ p {
   font-weight: bold;
 }
 @media screen and (min-width: 768px) {
+  .container {
+    justify-content: space-around;
+  }
   a:hover {
     color: coral;
   }
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-  }
 
-  .container {
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-
-  section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    position: relative;
+  .fa-times:hover {
+    color: orangered;
   }
 
   .more-info {

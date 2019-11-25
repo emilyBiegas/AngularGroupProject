@@ -42,13 +42,7 @@ export class RecipeListComponent implements OnInit {
   }
 
   ngOnInit() {
-    // console.log(this.recipes);
     console.log(this.favorites);
-    this.foodService.getRecipe(
-      this.criteria,
-      this.calories,
-      this.diet,
-      this.to
-    );
+    this.foodService.getRecipe(this.criteria, this.calories, this.diet);
   }
 }
