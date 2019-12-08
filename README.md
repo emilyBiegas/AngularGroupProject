@@ -1,4 +1,4 @@
-Please visit https://recipeasplease.surge.sh/search-criteria to see the code in action!
+Please visit https://recipeasplease.surge.sh/search-criteria to see the code in action! This version includes personal edits I made subsequently to the group project completion. 
 
 # AngularGroupProject
 
