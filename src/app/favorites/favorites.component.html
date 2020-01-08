@@ -15,7 +15,7 @@
         <i (click)="deleteFavorite(i)" class="fas fa-times"></i>
       </span>
       <div class="more-info" *ngIf="index === i">
-        <i (click)="hideRecipe(i)" class="fas fa-times"></i>
+        <i (click)="hideRecipe()" class="fas fa-times"></i>
 
         <span class="textContainer">
           <ul class="labels" *ngFor="let label of favorite.recipe.healthLabels">
