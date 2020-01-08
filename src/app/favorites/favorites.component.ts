@@ -12,14 +12,17 @@ export class FavoritesComponent implements OnInit {
   favorites: any;
   index: number;
   math: Math;
+  clicked: boolean;
   constructor(private foodService: FoodService) {}
 
   setIndex(indexNumber: number) {
     this.index = indexNumber;
+    this.clicked = true;
   }
 
-  hideRecipe(indexNumber: number) {
+  hideRecipe() {
     this.index = null;
+    this.clicked = !this.clicked;
   }
 
   deleteFavorite(i) {

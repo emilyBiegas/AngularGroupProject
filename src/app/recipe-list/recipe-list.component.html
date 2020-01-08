@@ -1,3 +1,6 @@
+<div *ngIf="clicked">
+  <div class="wholedoc" (click)="hideRecipe()"></div>
+</div>
 <main class="bod">
   <div class="container">
     <section class="recipePost" *ngFor="let recipe of recipes; index as i">

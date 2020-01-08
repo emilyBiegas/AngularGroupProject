@@ -1,4 +1,7 @@
 <a routerLink="/search-criteria" class="fas fa-home"></a>
+<div *ngIf="clicked">
+  <div class="wholedoc" (click)="hideRecipe()"></div>
+</div>
 <main>
   <div class="container">
     <section class="recipePost" *ngFor="let favorite of favorites; index as i">

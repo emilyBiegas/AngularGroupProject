@@ -18,6 +18,7 @@ export class RecipeListComponent implements OnInit {
   calories: string;
   diet: string;
   to: string;
+  clicked: boolean;
 
   // filterText: string = "";
 
@@ -35,10 +36,12 @@ export class RecipeListComponent implements OnInit {
 
   setIndex(indexNumber: number) {
     this.index = indexNumber;
+    this.clicked = true;
   }
 
-  hideRecipe(indexNumber: number) {
+  hideRecipe() {
     this.index = null;
+    this.clicked = !this.clicked;
   }
 
   ngOnInit() {

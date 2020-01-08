@@ -1,3 +1,11 @@
+.wholedoc {
+  z-index: 4;
+  height: 100vh;
+  width: 100vw;
+  background-color: whitesmoke;
+  opacity: 10%;
+  position: fixed;
+}
 section {
   display: flex;
   flex-direction: column;

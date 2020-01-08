@@ -17,7 +17,7 @@ export class FoodService {
   constructor(private http: HttpClient) {}
 
   getRecipe(criteria: string, calories: string, diet: string): Observable<any> {
-    return this.http.get("http://api.edamam.com/search?", {
+    return this.http.get("https://api.edamam.com/search?", {
       params: {
         app_key: API_KEY,
         app_id: APP_ID,
